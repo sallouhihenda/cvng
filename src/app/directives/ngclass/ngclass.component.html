@@ -1,0 +1,23 @@
+<input type="text" appRainbow>
+<p [hidden]="isAllume">
+  avec hidden
+</p>
+<p *ngIf="isAllume">
+  avec ngIf
+</p>
+<div
+  (click)="interupteur()"
+  [ngClass]="{
+    'allume': isAllume,
+    'eteinte': !isAllume
+  }"
+>ngclass works!</div>
+
+<div appHighlight>
+  test directive
+</div>
+
+<p appHighlight [in]="'black'" [out]="'white'">test </p>
+<p appHighlight [in]="'red'" [out]="'white'">test </p>
+<p appHighlight [in]="'green'" [out]="'white'">test </p>
+<p appHighlight [in]="'yellow'" [out]="'black'">test </p>
